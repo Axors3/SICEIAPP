@@ -10,7 +10,7 @@ pipeline{
             steps {
                 script {
                     docker build --tag siceiapp-master .
-                    
+                    docker run --detach siceiapp-master
                 }
             }
         }
