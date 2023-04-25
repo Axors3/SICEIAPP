@@ -1,6 +1,11 @@
 pipeline{
     agent any
     stages{
+        stage('Clone Proyect') {
+            steps {
+                git url: 'https://github.com/Axors3/SICEI_APP.git',branch: 'master'
+            }
+        }
         stage('Build') {
             steps {
                 bat 'npm install'
