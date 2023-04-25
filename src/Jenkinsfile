@@ -6,7 +6,7 @@ pipeline{
                 bat 'npm install'
             }
         }
-        stage('Build Image')
+        stage('Build Image') {
             steps {
                 script {
                     def Name = 'SICEIAPP:${env.BUILD_NUMBER}'
@@ -14,6 +14,7 @@ pipeline{
                     docker.run('--name container:${env.BUILD_NUMBER} -p 8080:8080 ${Name}')
                 }
             }
+        }
         
     }
 }
