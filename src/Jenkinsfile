@@ -11,6 +11,11 @@ pipeline{
                 bat "docker build --tag siceiapp-master ."
             }
         }
+        stage('Run Image') {
+            steps {
+                bat "docker run --detach siceiapp-master"
+            }
+        }
         
     }
 }
