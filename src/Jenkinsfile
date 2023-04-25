@@ -9,8 +9,8 @@ pipeline{
         stage('Build Image') {
             steps {
                 script {
-                    docker build -t siceiapp-master:1.0.0-10 .
-                    docker run -it siceiapp-master:1.0.0-10 cmd
+                    docker build -t siceiapp-master .
+                    docker run -it siceiapp-master cmd
                 }
             }
         }
