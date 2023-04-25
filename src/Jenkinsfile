@@ -10,7 +10,7 @@ pipeline{
             steps {
                 script {
                     docker build -t siceiapp-master .
-                    docker run -it siceiapp-master cmd
+                    docker run -dp 3000:3000 siceiapp-master 
                 }
             }
         }
