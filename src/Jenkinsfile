@@ -9,8 +9,8 @@ pipeline{
         stage('Build Image') {
             steps {
                 script {
-                    docker build -t siceiapp-master .
-                    docker run -dp 3000:3000 siceiapp-master 
+                    docker build --tag siceiapp-master .
+                    docker run --detach siceiapp-master 
                 }
             }
         }
